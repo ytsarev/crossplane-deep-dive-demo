@@ -1,0 +1,14 @@
+apiVersion: database.example.org/v1alpha1
+kind: PostgreSQLInstance
+metadata:
+  name: crossplane-deep-dive-db
+  namespace: default
+spec:
+  parameters:
+    storageGB: 10
+    passwordSecretName: crossplane-deep-dive-dbinstance
+  compositionSelector:
+    matchLabels:
+      provider: aws
+  writeConnectionSecretToRef:
+    name: db-conn

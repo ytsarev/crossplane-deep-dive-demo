@@ -1,0 +1,10 @@
+apiVersion: s3.aws.jet.crossplane.io/v1alpha2
+kind: Bucket
+metadata:
+  name: crossplane-deepdive-demo-bucket
+spec:
+  forProvider:
+    region: eu-west-1
+    acl: private
+    tags:
+      Name: CrossplaneDeepDiveDemoBucket

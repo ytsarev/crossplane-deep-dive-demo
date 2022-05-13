@@ -1,0 +1,11 @@
+apiVersion: rds.aws.jet.crossplane.io/v1alpha2
+kind: ParameterGroup
+metadata:
+  name: crossplane-deep-dive-parametergroup
+spec:
+  forProvider:
+    region: eu-west-1
+    family: postgres13
+    parameter:
+      - name: log_connections
+        value: "1"
