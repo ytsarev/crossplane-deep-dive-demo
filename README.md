@@ -45,6 +45,12 @@ kubectl apply -f examples/compositions/composition-aws.yaml
 kubectl get xrd
 kubectl get compositions
 ```
+
+* Create password secret that will be referenced by the Claim
+```
+kubectl apply -f examples/managed-resources/aws/secret.yaml
+```
+
 * Apply the Claim
 ```sh
 kubectl apply -f examples/claims/claim-aws.yaml
